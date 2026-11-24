@@ -1,0 +1,34 @@
+{
+  "name": "bb-plugin-gemini-quota",
+  "version": "0.2.1",
+  "type": "module",
+  "engines": {
+    "bb": ">=0.50",
+    "bbPluginSdk": ">=0.6.157"
+  },
+  "bb": {
+    "name": "Gemini Quota",
+    "description": "See Gemini’s five-hour and weekly usage in Provider Usage. Refresh on demand with a signed-in Antigravity CLI on your Linux host.",
+    "branding": {
+      "icon": "Gauge"
+    },
+    "server": "./server.ts"
+  },
+  "scripts": {
+    "test": "node --test terminal-quota.test.ts manual-refresh.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@get-bb/plugin-sdk": "0.6.157",
+    "@xterm/headless": "^5.5.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/docomoz/bb-plugin-gemini-quota.git"
+  }
+}
