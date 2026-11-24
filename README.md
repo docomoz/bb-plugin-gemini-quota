@@ -2,6 +2,8 @@
 
 See Antigravity’s five-hour and weekly Gemini quota in BB’s built-in Provider Usage panel.
 
+![Gemini’s five-hour and weekly quota in BB Provider Usage](assets/provider-usage.jpg)
+
 ## Requirements
 
 Use BB 0.50 or later with plugin SDK 0.6.157. The integration was tested with Antigravity CLI 1.5.16 on a Linux host. The parser expects the English `/usage` screen. Install and sign in to Antigravity on the host that BB will query. You may need a Google AI plan that includes the quota windows shown in Antigravity.
