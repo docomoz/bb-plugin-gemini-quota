@@ -225,7 +225,7 @@ export default function geminiQuota(bb: BbPluginApi) {
       }).format(saved.observedAt);
       return { accountKey: null, observedAt: saved.observedAt, usage: {
         status: "ok" as const, accountEmail: null,
-        planLabel: `Snapshot ${localTime} UTC${refreshFailed ? " · refresh failed" : ""}`, windows,
+        planLabel: `${localTime} UTC${refreshFailed ? " · refresh failed" : ""}`, windows,
       } };
     },
   }, { experimental_discoverable: true, experimental_description: "Gemini quota snapshots from the Antigravity terminal." });
