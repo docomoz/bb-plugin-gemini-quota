@@ -14,7 +14,7 @@ export async function readAntigravityQuota(
 ): Promise<GeminiQuotaFrame> {
   const terminal = await terminals.create({
     scope: { kind: "host_path", hostId, cwd },
-    title: "Обновление квот Gemini",
+    title: "Refresh Gemini quotas",
     cols: 120,
     rows: 45,
     start: { mode: "argv", argv: [executablePath] },

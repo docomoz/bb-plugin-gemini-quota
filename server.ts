@@ -217,15 +217,15 @@ export default function geminiQuota(bb: BbPluginApi) {
       if (!saved || windows.length === 0) {
         return { accountKey: null, observedAt: saved?.observedAt ?? null, usage: {
           status: "error" as const, accountEmail: null, planLabel: null,
-          message: "Не удалось получить квоты Antigravity. Проверь вход в Google на сервере.",
+          message: "Could not load Gemini quotas. Check your Antigravity sign-in on the host.",
         } };
       }
-      const localTime = new Intl.DateTimeFormat("ru-RU", {
-        day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: "UTC",
+      const localTime = new Intl.DateTimeFormat("en-GB", {
+        day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: "UTC",
       }).format(saved.observedAt);
       return { accountKey: null, observedAt: saved.observedAt, usage: {
         status: "ok" as const, accountEmail: null,
-        planLabel: `Снимок ${localTime} UTC${refreshFailed ? " · сбой ↻" : ""}`, windows,
+        planLabel: `Snapshot ${localTime} UTC${refreshFailed ? " · refresh failed" : ""}`, windows,
       } };
     },
   }, { experimental_discoverable: true, experimental_description: "Gemini quota snapshots from the Antigravity terminal." });

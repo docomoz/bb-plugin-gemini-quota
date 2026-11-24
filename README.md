@@ -2,7 +2,7 @@
 
 See Antigravity’s five-hour and weekly Gemini quota in BB’s built-in Provider Usage panel.
 
-![Gemini’s five-hour and weekly quota in BB Provider Usage](assets/provider-usage.jpg)
+![Gemini’s five-hour and weekly quota in BB Provider Usage](assets/provider-usage-en.jpg)
 
 ## Requirements
 
